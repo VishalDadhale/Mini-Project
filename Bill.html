@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.navjivan.com</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type ="text/css" href="Bill.css">
+
+	<script type="text/javascript">
+		
+		$(document).ready(function()
+		{
+			$(".container").slideDown(1000);
+		})
+
+		function validate()
+		{
+			if(document.f1.product.value=="")
+			{
+				alert("Please Select Product ");
+				document.f1.product.focus();
+				return false;
+			}
+
+			if(document.f1.qty.value=="")
+			{
+				alert("Please Enter Quantity ");
+				document.f1.qty.focus();
+				return false;
+			}
+		}
+
+		function select_product()
+		{
+			var rate=document.f1.product.value;
+
+			document.f1.rate.value=rate;
+		}
+
+		function bill_fun()
+		{
+			var rate=document.f1.product.value;
+			var qty=document.f1.qty.value;
+
+			var bill=rate * qty;
+
+			document.f1.bill.value=bill;
+		}
+
+	</script>
+
+</head>
+<body onload="select_product()"> 
+
+	<div class="jumbotron">
+		<h1><img src="logo.png" class="logo">Navjivan Dairy</h1>
+	</div>
+
+	
+	<div class="mainnav">
+		
+		<a href="chitaleDairy.html" class="nav">HOME</a>
+		<a href="Product.html" class="nav">PRODUCTS</a>
+		<a href="aboutus.html" class="nav">ABOUT US</a>
+		<a href="contactus.html" class="nav">CONTACT US</a>
+
+	</div>
+
+	<div class="container well">
+		<form id="pform" name="f1" action="Success.html" onsubmit="return validate()">
+		<div class="form-horizontal">
+			
+			<div class="col-sm-12 text-center">
+				<h3>Order</h3>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3">Product</label>
+				<div class="col-sm-9">
+					<select id="product" class="form-control" onchange="select_product()">
+						<option disabled selected>Select Product to Buy</option>
+						<option value="48" selected>Cow Milk(Lit.)</option>
+						<option value="55">Buffelo Milk(Lit.)</option>
+						<option value="80">Dahi (kg)</option>
+						<option value="100">Shrikhand (kg)</option>
+						<option value="200">Paneer (kg)</option>
+						<option value="400">Ghee (kg)</option>
+						<option value="450">Cheese (1 pack)</option>
+						<option value="20">Lassi</option>
+					</select>
+					<span id="produ"></span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3">Rate</label>
+				<div class="col-sm-9">
+					<input type="text" name="rate" class="form-control" placeholder="Rate of Product">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3">Quantity</label>
+				<div class="col-sm-9">
+					<input type="text" name="qty" class="form-control" min=0 placeholder="Enter Quantity" onkeyup="bill_fun()">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-sm-3">Bill</label>
+				<div class="col-sm-9">
+					<input type="text" name="bill" class="form-control" placeholder="Bill Amount" onkeyup="return bill_fun()">
+				</div>
+			</div>
+
+			<div class="form-group text-center">
+				<button type="submit" class="btn btn-success" >Place Order</button>
+				<button onclick="print()" class="btn btn-warning">Print</button>
+			</div>
+
+		</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		
+		
+
+	</script>
+
+</body>
+</html>

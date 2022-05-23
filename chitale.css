@@ -1,0 +1,117 @@
+body{
+			font-family: Arial;
+	}
+
+@font-face{
+	font-family: vd;
+	src: url("BADABB.ttf");
+}
+
+h1{
+	font-family: vd;
+	font-size: 65px;
+	letter-spacing: 5px;
+}
+
+.container{
+	width: 60%;
+}
+
+.logo{
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-left: px;
+	margin-top: -10px;
+}
+
+.jumbotron{
+	background: linear-gradient(to bottom,#00ffdd,cornflowerblue);
+	font-weight: bold;
+	color: white;
+	text-align: center;
+
+}
+
+footer{
+	bottom: 0px;
+	background-color: #000123;
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 10px ;
+	letter-spacing: 1px;
+}
+
+#img{
+	display: none;
+}
+
+.dairyimg{
+	border-bottom: 2%;
+}
+
+.mainnav {
+	width: 100%;
+	color: white;
+	padding: 10px 20px;
+	/*position: sticky;
+	top: 0px;*/
+	padding: 10px;
+}
+
+
+h2{
+	color: red;
+}
+
+.abc{
+	display: flex;
+	margin: 1%;
+}
+
+.pic{
+	background-color: white;
+	align-items: center;
+}
+
+.container{
+	font-size: 17px;
+}
+
+a{
+	text-decoration: none;
+	padding: 10px 5px;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+#about{
+	border: 2px 2px black;
+	background-color: white;
+	font-size: 15px;
+	letter-spacing: 2px;
+	float: right;
+
+}
+
+.gst{
+	padding: 01px 0px;
+	color: grey;
+}
+
+a:hover{
+	color: Black;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+img{
+	float: right;
+	margin-right: 1%;
+}
+
+.col-sm-2{
+	background-color: white;
+}

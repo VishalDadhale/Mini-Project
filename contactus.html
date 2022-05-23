@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.navjivan.com</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="contactus.css">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function()
+		{
+			$('.form-horizontal').show(1000);
+			$('.map').fadeIn(3000);
+	
+		})
+
+		function validate_fun()
+		{
+			if(document.f1.name.value=="")
+			{
+				alert("Please Enter First Name ");
+				document.f1.name.focus();
+				return false;
+			}
+
+			var data=/^[A-Za-z]+$/;
+
+			if(!document.f1.name.value.match(data))
+			{
+				alert("Please Enter Alphabet Characters Only");
+				document.f1.name.focus();
+				return false;
+			}
+
+			if(document.f1.mail.value=="")
+			{
+				alert("Please Enter Email ");
+				document.f1.mail.focus();
+				return false;
+			}
+
+			if(document.f1.mobile.value=="")
+			{
+				alert("Please Enter Mobile No ");
+				document.f1.mobile.focus();
+				return false;
+			}
+
+			if(document.f1.msg.value=="")
+			{
+				alert("Please Enter Message ");
+				document.f1.msg.focus();
+				return false;
+			}
+
+			if(document.f1.city.value=="")
+			{
+				alert("Please Enter City ");
+				document.f1.msg.focus();
+				return false;
+			}
+
+			if(document.f1.mobile.value.length!=10)
+			{
+				alert("You Have Intered Invalid Phone No..");
+				document.f1.mobile.focus();
+				return false;
+			}
+
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div class="jumbotron">
+		<h1><img src="logo.png" class="logo">Navjivan Dairy</h1>
+	</div>
+
+	<div class="mainnav">
+		
+		<a href="chitaleDairy.html" class="nav">HOME</a>
+		<a href="Product.html" class="nav">PRODUCTS</a>
+		<a href="Bill.html" class="nav">BUY</a>
+		<a href="contactus.html" class="nav">CONTACT US</a>
+
+	</div>
+	<!-- <center> -->
+		<form name="f1">
+		<div class="container well">
+			<div class="row">
+				<div class="form-horizontal">
+				<div class="col-sm-12 well">
+					
+					<div class="col-sm-12">
+						<label class="text-center"><h3>Inquiry Form</h3></label>
+				
+						<div class="form-group">	
+							<label class="col-sm-2">Name</label>
+							<div class="col-sm-10">
+								<input type="text" name="name" class="form-control" placeholder="Enter First Name">
+							</div>
+						</div>
+
+						<div class="form-group">	
+							<label class="col-sm-2">Email</label>
+							<div class="col-sm-10">
+								<input type="email" name="mail" class="form-control" placeholder="Enter Email">
+							</div>
+						</div>
+
+						<div class="form-group">	
+							<label class="col-sm-2">Mobile</label>
+							<div class="col-sm-10">
+								<input type="tel" name="mobile" class="form-control" placeholder="Enter Mobile no.">
+							</div>
+						</div>
+
+						<div class="form-group">	
+							<label class="col-sm-2">Message</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" name="msg" placeholder="Enter your Message"></textarea>
+							</div>
+						</div>
+
+						<div class="form-group">	
+							<label class="col-sm-2">City</label>
+							<div class="col-sm-10">
+								<select name="city" class="form-control">
+									<option disabled selected>Select Option</option>
+									<option value="Mumbai">Pune</option>
+									<option value="Mumbai">Aurangabad</option>
+									<option value="Mumbai">Nanded</option>
+									<option value="Mumbai">Nashik</option>
+									<option value="Mumbai">Ahmadnager</option>
+									<option value="Mumbai">Nagpur</option>
+								</select>
+							</div>
+						</div>
+
+						<div>
+							<button class="btn btn-success" onclick="return validate_fun()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-sm-6 map well">
+				<h4>Location</h4>
+				<p>A/p - Bhilawadi Station
+				Tal. Palus, Dist: Sangli
+				Maharashtra, INDIA.
+				Pincode : 416303
+				Phone no: +91 2346 244000
+				e-mail : info@navjivandairy.com</p>
+
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1956765.427129533!2d72.22446441650389!3d16.686514911771656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0e2708d570f0d%3A0x650e539d5bd0808a!2sNavjeevan%20Dairy%20Shoppy!5e0!3m2!1sen!2sus!4v1653159365334!5m2!1sen!2sus" width="430" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			</div>
+
+				
+
+		</div>
+		</div>
+		</form>
+
+		<footer>
+			<p>© Copyright Navjivan. All Rights Reserved to www.navjivanDairy.in Designed by Vishal</p>
+		</footer>
+
+	<!-- </center> -->
+
+
+</body>
+</html>

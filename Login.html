@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navjivan Login Page</title>
+	<link rel="stylesheet" type="text/css" href="glassLogin.css">
+
+	<script type="text/javascript">
+
+		function login_fun()
+		{
+			var user=document.f1.uname.value;
+			var pass=document.f1.Pass.value;
+
+			if(user=="Admin" && pass=="Admin@123")
+			{
+				window.open('ChitaleDairy.html');
+			}
+			else
+			{
+				alert("Invalid User..");
+			}
+		}
+
+	</script>
+
+	<style type="text/css">
+
+		#footer
+		{
+			bottom: 0px;
+			color: white;
+			background-color: crimson;
+			width: 102%;
+			text-align: center;
+		}
+
+		h2{
+			font-family: times new roman;
+			text-align: center;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<form name="f1">
+
+		<div>
+		<table cellpadding="5">
+			<tr>
+				<td>
+					<h2>Navjivan Dairy Farm</h2>
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type="text" name="uname" placeholder="Username" class="inputclass" class="fa "></td>
+			</tr>
+
+			<tr>
+				<td><input type="password" name="Pass" placeholder="Password" class="inputclass"></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Login" class="buttonclass" onclick="login_fun()"></td>
+			</tr>
+
+			<tr>
+				<td><input type="Reset" value="Reset" class="buttonclass"></td>
+			</tr>
+
+			<tr>
+				<td><a href="forget.html" class="btn">Register</td>
+			</tr>
+
+		</table>
+		</div>
+	</form>
+
+
+
+</body>
+</html>

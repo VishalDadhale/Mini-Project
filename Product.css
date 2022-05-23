@@ -1,0 +1,91 @@
+.jumbotron{
+	background: linear-gradient(to bottom,#00ffdd,cornflowerblue);
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+@font-face{
+	font-family: vd;
+	src: url("BADABB.ttf");
+}
+
+h1{
+	font-family: vd;
+	font-size: 65px;
+	letter-spacing: 5px;
+}
+
+.logo{
+		float: left;
+		width: 100px;
+		height: 100px;
+		margin-left: 15px;
+		margin-top: -10px;
+}
+
+a,.btn{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+.nav{
+	color: cornflowerblue;
+	font-size: 17px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 0px 10px 10px 10px;
+}
+
+.nav:hover{
+	color: black;
+	text-decoration: none;
+}
+
+.mainnav {
+	width: 100%;
+	color: white;
+	padding: 10px 20px;
+	position: sticky;
+	top: 0px;
+	padding: 10px;
+}
+
+.img{
+	margin-left: 5%;
+}
+
+.row{
+	display: none;
+}
+
+.btn-info{
+	margin-bottom: 10px;
+}
+
+.prod{
+	background-color: white;
+}
+
+h4{
+	text-decoration: underline;
+	color: cornflowerblue;
+}
+
+span{
+	padding: 0px 5px 0px 0px;
+}
+
+footer{
+	bottom: 0px;
+	background-color: #000123;
+	color: white;
+	width: 100%;
+	text-align: center;
+	padding: 10px ;
+	letter-spacing: 1px;
+}
